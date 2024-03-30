@@ -1,26 +1,21 @@
-[
-    {
-        "cardId": 1,
-        "year": 2024,
-        "quarter": 2,
-        "categories": ["Gas & EV Charging", "Home Improvement Stores", "Public Transit"]
-    },
-    {
-        "cardId": 2,
-        "year": 2024,
-        "quarter": 2,
-        "categories": ["Amazon.com", "Hotels", "Restaurants"]
-    },
-    {
-        "cardId": 3,
-        "year": 2024,
-        "quarter": 2,
-        "categories": ["Amazon.com", "Hotels", "Restaurants"]
-    },
-    {
-        "cardId": 4,
-        "year": 2024,
-        "quarter": 2,
-        "categories": ["Grocery Stores", "Drug Stores"]
-    }
-]
+{
+    "startDate": "2024-01-01",
+    "items": [
+        {
+            "cardId": 1,
+            "categories": ["Gas & EV Charging", "Home Improvement Stores", "Public Transit"]
+        },
+        {
+            "cardId": 2,
+            "categories": ["Amazon.com", "Hotels", "Restaurants"]
+        },
+        {
+            "cardId": 3,
+            "categories": ["Amazon.com", "Hotels", "Restaurants"]
+        },
+        {
+            "cardId": 4,
+            "categories": ["Grocery Stores", "Drug Stores"]
+        }
+    ]
+}
