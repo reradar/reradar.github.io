@@ -1,21 +1,44 @@
-{
-    "startDateInt": 20240401,
-    "items": [
-        {
-            "cardId": 1,
-            "categories": ["Gas & EV Charging", "Home Improvement Stores", "Public Transit"]
-        },
-        {
-            "cardId": 2,
-            "categories": ["Amazon.com", "Hotels", "Restaurants"]
-        },
-        {
-            "cardId": 3,
-            "categories": ["Amazon.com", "Hotels", "Restaurants"]
-        },
-        {
-            "cardId": 4,
-            "categories": ["Grocery Stores", "Drug Stores"]
-        }
-    ]
-}
+[
+    {
+        "startDateInt": 20240101,
+        "items": [
+            {
+                "cardId": 1,
+                "categories": ["Restaurants", "Drug Stores"]
+            },
+            {
+                "cardId": 2,
+                "categories": ["Grocery Stores", "Fitness Clubs & Gym Memberships", "Self-Care & Spa Services"]
+            },
+            {
+                "cardId": 3,
+                "categories": ["Grocery Stores", "Fitness Clubs & Gym Memberships", "Self-Care & Spa Services"]
+            },
+            {
+                "cardId": 4,
+                "categories": ["Amazon.com", "Select Streaming Services"]
+            }
+        ]
+    },
+    {
+        "startDateInt": 20240401,
+        "items": [
+            {
+                "cardId": 1,
+                "categories": ["Gas & EV Charging", "Home Improvement Stores", "Public Transit"]
+            },
+            {
+                "cardId": 2,
+                "categories": ["Amazon.com", "Hotels", "Restaurants"]
+            },
+            {
+                "cardId": 3,
+                "categories": ["Amazon.com", "Hotels", "Restaurants"]
+            },
+            {
+                "cardId": 4,
+                "categories": ["Grocery Stores", "Drug Stores"]
+            }
+        ]
+    }
+]
