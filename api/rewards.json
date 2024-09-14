@@ -61,5 +61,26 @@
                 "categories": ["Gas Stations"]
             }
         ]
+    },
+    {
+        "startDateInt": 20241001,
+        "items": [
+            {
+                "cardId": 1,
+                "categories": ["Amazon.com", "Target"]
+            },
+            {
+                "cardId": 2,
+                "categories": ["PayPal", "McDonald's", "Pet Shops & Vet Services", "Select Charities"]
+            },
+            {
+                "cardId": 3,
+                "categories": ["PayPal", "McDonald's", "Pet Shops & Vet Services", "Select Charities"]
+            },
+            {
+                "cardId": 4,
+                "categories": ["Restaurants", "Citi Travel"]
+            }
+        ]
     }
 ]
