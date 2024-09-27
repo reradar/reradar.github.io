@@ -1,0 +1,374 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+}
+
+/* Compact Header Styles */
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00c6ff;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Hero Section with App Info */
+.hero {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 1000px; /* Increased width for the hero section */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Optional padding for better aesthetics */
+}
+
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero-content .cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .cta-button:hover {
+    background-color: #388E3C;
+}
+
+/* App Info Container */
+.app-info {
+    display: flex;
+    align-items: center; /* Vertically center the logo and text */
+    margin-bottom: 20px; /* Space below the app info */
+    text-align: left; /* Align text to the left */
+}
+
+.app-info .logo {
+    width: 50px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Corner radius similar to App Store */
+    margin-right: 15px; /* Space between logo and app name */
+}
+
+.app-info h1 {
+    font-size: 28px; /* Adjust font size for the title */
+    margin: 0; /* Remove default margin */
+}
+
+.app-info .subtitle {
+    font-size: 16px; /* Smaller font size for the subtitle */
+    color: #999; /* Lighter color for the subtitle */
+    margin: 0; /* Remove default margin */
+    font-weight: 300; /* Optional: make the subtitle lighter in weight */
+}
+
+/* Existing styles for the rest of the sections */
+
+/* Description and Download Button Container */
+.description-download {
+    margin-top: 10px; /* Space above this section */
+    text-align: left; /* Ensure left alignment */
+}
+
+.description-download p {
+    margin: 0 0 10px 0; /* Remove default margin and add space below the paragraph */
+}
+
+/* App Store Badge */
+.app-store-badge img {
+    width: 150px; /* Adjust width as needed for a larger button */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* App Screenshots Container */
+.app-screenshots {
+    display: flex; /* Use flexbox for horizontal layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    justify-content: flex-start; /* Align images to the start */
+    gap: 20px; /* Space between images */
+    margin-top: 40px; /* Space above this section */
+    padding: 10px 0; /* Optional padding for better aesthetics */
+}
+
+.app-screenshots img {
+    flex: 0 0 auto; /* Allow images to maintain their width */
+    width: 200px; /* Fixed width for images */
+    max-width: 100%; /* Ensure it doesn’t exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Add corner radius */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+    scroll-snap-align: start; /* Align images at the start when scrolling */
+}
+
+/* Hide scrollbar for a cleaner look (optional) */
+.app-screenshots::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on WebKit browsers */
+}
+
+
+
+/* Responsive Styling for Compact Header & Hero */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero-content {
+        max-width: 95%; /* Make it responsive for smaller screens */
+        padding: 0 5px; /* Reduce padding on smaller screens */
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .app-screenshots {
+        flex-direction: column;
+        display: block; /* For mobile, allow horizontal scrolling */
+        white-space: nowrap; /* Prevent line breaks for images */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+    }
+
+    .app-screenshots img {
+        display: inline-block;
+        margin-right: 10px; /* Small gap between images */
+        max-width: 180px; /* Set a maximum width for mobile */
+        width: 180px; /* Fixed width for mobile */
+    }
+
+    .app-screenshots img:last-child {
+        margin-right: 0; /* No margin for the last image */
+    }
+}
+
+/* Features Section */
+.features {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    flex: 1;
+    margin: 0 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px rgba(0,0,0,0.05);
+}
+
+.feature-item h3 {
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: white; /* White background for clarity */
+    padding: 60px 20px; /* Space around the section */
+    text-align: center; /* Center the heading */
+}
+
+.how-it-works h2 {
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.how-it-works ol {
+    max-width: 600px; /* Maximum width for the ordered list */
+    margin: 0 auto; /* Center the ordered list */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.how-it-works ol li {
+    padding: 20px 0; /* Space above and below each list item */
+    border-bottom: 1px solid #ddd; /* Divider between items */
+    text-align: left; /* Left-align text in list items */
+}
+
+.how-it-works ol li:last-child {
+    border: none; /* Remove the border for the last item */
+}
+
+.how-it-works ol strong {
+    color: #4CAF50; /* Green color for strong text */
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonial-item {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styling for Mobile Devices */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .features-grid {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        margin: 20px 0;
+    }
+
+    .cta-button {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    header h2 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .header-content h2, .hero-text h2 {
+        font-size: 1.8em;
+    }
+
+    .header-content p, .hero-text p {
+        font-size: 1em;
+    }
+
+    .how-it-works ol {
+        max-width: 100%;
+    }
+
+    .testimonial-item {
+        padding: 15px;
+    }
+
+    footer ul {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
