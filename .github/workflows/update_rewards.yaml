@@ -46,6 +46,6 @@ jobs:
         if: steps.check-branch.outputs.exists == 'false'
         run: |
           target_date_int=$(python scripts/gen_next_quarter.py)
-          gh pr create --title "Update Rewards for $target_date_int" --body "Created by Github Actions" --label "$target_date_int"
+          gh pr create --title "Update Rewards for $target_date_int" --body "Created by Github Actions"
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
