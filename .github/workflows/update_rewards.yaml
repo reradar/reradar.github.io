@@ -20,12 +20,11 @@ jobs:
         shell: bash
         run: |
           branch=bot-$(python scripts/gen_next_quarter.py)
-          git ls-remote --exit-code origin $branch >/dev/null 2>&1
-          EXIT_CODE=$?
-          if [[ $EXIT_CODE == '0' ]]; then
+          echo checking branch $branch
+          if [[ -n $(git ls-remote --heads origin $branch) ]]; then
             echo "Git branch '$branch' exists in the remote repository"
             echo "exists=true" >> $GITHUB_OUTPUT
-          elif [[ $EXIT_CODE == '2' ]]; then
+          else
             echo "Git branch '$branch' does not exist in the remote repository"
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
