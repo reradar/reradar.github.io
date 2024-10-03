@@ -1,0 +1,27 @@
+name: Report remaining open issues
+on: 
+  schedule: 
+    # https://crontab.guru/#0_0_14-31_4,6,9,12_*
+    - cron: '0 0 14-31 3,6,9,12 *'
+jobs:
+  update_rewards:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: update rewards.json
+        shell: bash
+        run: |
+          target_date_int=$(python scripts/gen_next_quarter.py)
+          python scripts/update_rewards.py
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Updated rewards info for $target_date_int"
+      - name: create pull request
+        run: |
+          target_date_int=$(python scripts/gen_next_quarter.py)
+          gh pr create --title "Update Rewards for $target_date_int" --body "Created by Github Actions" --label "$target_date_int"
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
