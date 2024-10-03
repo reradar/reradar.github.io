@@ -15,6 +15,7 @@ jobs:
       - name: update rewards.json
         shell: bash
         run: |
+          pip install -r requirements.txt
           target_date_int=$(python scripts/gen_next_quarter.py)
           python scripts/update_rewards.py
           git config user.name "github-actions[bot]"
