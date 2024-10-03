@@ -12,6 +12,8 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: automate
       - name: update rewards.json
         shell: bash
         run: |
