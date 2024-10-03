@@ -12,4 +12,5 @@ def get_start_date_next_quarter():
     return next_quarter_start_year * 10000 + next_quarter_start_month * 100 + 1
 
 if __name__ == "__main__":
-    print(get_start_date_next_quarter())
+    # print(get_start_date_next_quarter())
+    print(20241001)
