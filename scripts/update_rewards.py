@@ -100,7 +100,7 @@ class Worker:
 
 if __name__ == "__main__":
     worker = Worker()
-    target_date_int = worker.get_next_quarter_start()
+    target_date_int = 20241001 # worker.get_next_quarter_start()
     citi = worker.get_citi_rewards(target_date_int)
     chase = worker.get_chase_rewards(target_date_int)
     discover = worker.get_discover_rewards(target_date_int)
@@ -116,5 +116,4 @@ if __name__ == "__main__":
         worker.update_rewards(os.path.join(path, "../api/rewards.json"), 20241201, rewards)
         print("updated rewards for", target_date_int)
     else:
-        print("nothing to update")
-        sys.exit("nothing to update")
+        sys.exit("nothing to update for rewards info")
