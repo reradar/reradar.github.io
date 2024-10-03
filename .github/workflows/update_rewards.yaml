@@ -25,6 +25,7 @@ jobs:
           python scripts/update_rewards.py
           git add -A
           git commit -m "Updated rewards info for $target_date_int"
+          git push
       - name: create pull request
         run: |
           target_date_int=$(python scripts/gen_next_quarter.py)
