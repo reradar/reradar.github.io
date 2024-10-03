@@ -113,7 +113,7 @@ if __name__ == "__main__":
             (CITI_ID, citi)
         ]
         path = os.path.dirname(os.path.realpath(__file__))
-        worker.update_rewards(os.path.join(path, "../api/rewards.json"), 20241201, rewards)
+        worker.update_rewards(os.path.join(path, "../api/rewards.json"), target_date_int, rewards)
         print("updated rewards for", target_date_int)
     else:
         sys.exit("nothing to update for rewards info")

@@ -20,9 +20,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@users.noreply.github.com"
-          pip install -r requirements.txt
           target_date_int=$(python scripts/gen_next_quarter.py)
+          git ls-remote --exit-code origin bot-$target_date_int && exit 1
           git checkout -b bot-$target_date_int
+          pip install -r requirements.txt
           python scripts/update_rewards.py
           git add -A
           git commit -m "Updated rewards info for $target_date_int"
