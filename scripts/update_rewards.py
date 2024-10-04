@@ -125,4 +125,4 @@ if __name__ == "__main__":
         worker.update_rewards(os.path.join(path, "../api/rewards.json"), target_date_int, rewards)
         print("updated rewards for", target_date_int)
     else:
-        print("nothing to update for rewards info", target_date_int)
+        print("no rewards to update for", target_date_int)
