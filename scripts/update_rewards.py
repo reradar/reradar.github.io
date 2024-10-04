@@ -65,12 +65,12 @@ class Worker:
         else:
             return item.strip()
     
-    def update_rewards(self, file_path: str, startDateInt: int, rewards: list[tuple[int, list[str]]]) -> None:
+    def update_rewards(self, file_path: str, startDateInt: int, rewards: list[tuple[int, list[str]]]) -> bool:
         with open(file_path, 'r') as f:
             data = json.load(f)
 
-        if data[-1]["startDateInt"] >= startDateInt:
-            return
+        # if data[-1]["startDateInt"] >= startDateInt:
+        #     return False
 
         data = data[-3:]
 
@@ -87,6 +87,7 @@ class Worker:
 
         with open(file_path, 'w') as f:
             json.dump(data, f, indent=4)
+        return True
         
     def get_next_quarter_start(self, today = datetime.today()) -> int:
         # today = datetime.today()
@@ -122,7 +123,10 @@ if __name__ == "__main__":
             (CITI_ID, citi)
         ]
         path = os.path.dirname(os.path.realpath(__file__))
-        worker.update_rewards(os.path.join(path, "../api/rewards.json"), target_date_int, rewards)
-        print("updated rewards for", target_date_int)
+        updated = worker.update_rewards(os.path.join(path, "../api/rewards.json"), target_date_int, rewards)
+        if updated:
+            print("updated rewards for", target_date_int)
+        else:
+            print("reward info has already been updated for", target_date_int)
     else:
         print("no rewards to update for", target_date_int)
