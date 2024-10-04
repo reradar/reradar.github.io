@@ -2,6 +2,10 @@ name: Report remaining open issues
 on:
   push:
   workflow_dispatch:
+    inputs:
+      target_date_int:
+        description: 'Target Quarter Start Date (YYYYMMdd)'
+        required: false
   schedule: 
     # https://crontab.guru/#0_0_14-31_4,6,9,12_*
     - cron: '0 0 14-31 3,6,9,12 *'
@@ -15,11 +19,17 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: automate
+      - name: set target date
+        id: vars
+        shell: bash
+        run: |
+          target_date=$(python scripts/gen_next_quarter.py --target_date_int ${{ github.event.inputs.target_date_int }})
+          echo "target_date_int=$target_date" >> $GITHUB_OUTPUT
       - name: check branch exists
         id: check-branch
         shell: bash
         run: |
-          branch=bot-$(python scripts/gen_next_quarter.py)
+          branch=bot-${{ steps.vars.outputs.target_date_int }}
           echo checking branch $branch
           if [[ -n $(git ls-remote --heads origin $branch) ]]; then
             echo "Git branch '$branch' exists in the remote repository"
@@ -29,23 +39,32 @@ jobs:
             echo "exists=false" >> $GITHUB_OUTPUT
           fi
       - name: update rewards.json
+        id: have-changes
         shell: bash
         if: steps.check-branch.outputs.exists == 'false'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@users.noreply.github.com"
-          target_date_int=$(python scripts/gen_next_quarter.py)
+          target_date_int=${{ steps.vars.outputs.target_date_int }}
           git checkout -b bot-$target_date_int
           pip install -r requirements.txt
-          python scripts/update_rewards.py
+          python scripts/update_rewards.py --target_date_int $target_date_int
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "successfully pulled rewards for $target_date_int"
+            echo "changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "no rewards available for $target_date_int"
+            echo "changes=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           git add -A
           git commit -m "Updated rewards info for $target_date_int"
           git push --set-upstream origin bot-$target_date_int
       - name: create pull request
         shell: bash
-        if: steps.check-branch.outputs.exists == 'false'
+        if: steps.check-branch.outputs.exists == 'false' && steps.have-changes.outputs.changes == 'true'
         run: |
-          target_date_int=$(python scripts/gen_next_quarter.py)
+          target_date_int=${{ steps.vars.outputs.target_date_int }}
           gh pr create --title "Update Rewards for $target_date_int" --body "Created by Github Actions"
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

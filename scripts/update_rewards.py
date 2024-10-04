@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import requests
@@ -99,8 +100,16 @@ class Worker:
         return next_quarter_start_year * 10000 + next_quarter_start_month * 100 + 1
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser("update_rewards")
+    parser.add_argument("--target_date_int", nargs="?", help="Target quarter start date in integer format YYYYMMdd.", type=int)
+    args = parser.parse_args()
+
     worker = Worker()
-    target_date_int = 20241001 # worker.get_next_quarter_start()
+    if args.target_date_int and args.target_date_int > 20240101 and args.target_date_int < 30240101:
+        target_date_int = args.target_date_int
+    else:
+        target_date_int = worker.get_next_quarter_start()
+
     citi = worker.get_citi_rewards(target_date_int)
     chase = worker.get_chase_rewards(target_date_int)
     discover = worker.get_discover_rewards(target_date_int)
@@ -116,4 +125,4 @@ if __name__ == "__main__":
         worker.update_rewards(os.path.join(path, "../api/rewards.json"), target_date_int, rewards)
         print("updated rewards for", target_date_int)
     else:
-        sys.exit("nothing to update for rewards info")
+        print("nothing to update for rewards info", target_date_int)
