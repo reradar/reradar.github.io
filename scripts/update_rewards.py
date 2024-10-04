@@ -69,8 +69,8 @@ class Worker:
         with open(file_path, 'r') as f:
             data = json.load(f)
 
-        # if data[-1]["startDateInt"] >= startDateInt:
-        #     return False
+        if data[-1]["startDateInt"] >= startDateInt:
+            return False
 
         data = data[-3:]
 
