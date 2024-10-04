@@ -1,4 +1,4 @@
-name: Report remaining open issues
+name: Update Seasonal Rewards
 on:
   workflow_dispatch:
     inputs:
