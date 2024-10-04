@@ -55,6 +55,10 @@ jobs:
             echo "changes=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+
+          npm install -g underscore-cli
+          underscore print -i api/rewards.json -o api/rewards.json.tmp && mv api/rewards.json.tmp api/rewards.json
+
           git add -A
           git commit -m "Updated rewards info for $target_date_int"
           git push --set-upstream origin bot-$target_date_int
