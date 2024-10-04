@@ -1,6 +1,5 @@
 name: Report remaining open issues
 on:
-  push:
   workflow_dispatch:
     inputs:
       target_date_int:
