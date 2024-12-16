@@ -105,7 +105,7 @@ class Worker:
         for (cardId, categories) in rewards:
             new_entry["items"].append({
                 "cardId": cardId,
-                "categores": categories
+                "categories": categories
             })
         data.append(new_entry)
 
