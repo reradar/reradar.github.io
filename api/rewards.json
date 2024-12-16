@@ -41,10 +41,10 @@
   {
     "startDateInt": 20250101,
     "items": [
-      { "cardId": 1, "categores": ["Restaurants", "Home Improvement Stores", "Select Streaming Services"] },
+      { "cardId": 1, "categories": ["Restaurants", "Home Improvement Stores", "Select Streaming Services"] },
       {
         "cardId": 2,
-        "categores": [
+        "categories": [
           "Grocery Stores",
           "Norwegian Cruise Line",
           "Fitness Clubs & Gym",
@@ -53,14 +53,14 @@
       },
       {
         "cardId": 3,
-        "categores": [
+        "categories": [
           "Grocery Stores",
           "Norwegian Cruise Line",
           "Fitness Clubs & Gym",
           "Hair, Nails & Spa Services"
         ]
       },
-      { "cardId": 4, "categores": ["Amazon", "Select Streaming Services"] }
+      { "cardId": 4, "categories": ["Amazon", "Select Streaming Services"] }
     ]
   }
 ]
