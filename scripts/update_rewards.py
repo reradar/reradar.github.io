@@ -26,7 +26,7 @@ class Worker:
         divs = soup.find_all("div", class_ = "dividend-quarterly-offer-content__offer__labels__title")
         return [self.process_item(div.h3.contents[0]) for div in divs]
 
-    def get_chase_rewards(self, target_date_int: int) -> list[str]:
+    def get_chase_rewards_bak(self, target_date_int: int) -> list[str]:
         resp = requests.get("https://www.chase.com/personal/credit-cards/freedom/freedomfive")
         if resp.status_code != 200:
             return []
@@ -44,6 +44,30 @@ class Worker:
             return [self.process_item(span.contents[0]) for span in spans]
         return []
     
+    def get_chase_rewards(self, target_date_int: int) -> list[str]:
+        resp = requests.get("https://www.chasebonus.com/")
+        if resp.status_code != 200:
+            return []
+        soup = BeautifulSoup(resp.text, 'html.parser')
+        date_range = soup.find("div", class_ = "descText")
+        match = re.search(r"from (\d{1,2})/(\d{1,2})/(\d{4}) - \d{1,2}/\d{1,2}/\d{4}", date_range.text)
+        date_integer = 0
+        if match:
+            day, month, year = match.group(1), match.group(2), match.group(3)
+            date_integer = int(year) * 10000 + int(month) * 100 + int(day)
+        if date_integer == target_date_int:
+            categories = []
+            category_items = soup.find_all("div", class_ = "category-item")
+            for item in category_items:
+                h2_tag = item.find('h2')
+                # Extract only the top-level text nodes
+                top_level_text = ''.join(h2_tag.find_all(string=True, recursive=False)).strip()
+                # Replace <br> and normalize spaces
+                top_level_text = top_level_text.replace('\n', ' ').replace('<br>', ' ').strip()
+                categories.append(top_level_text.title())
+            return categories
+        return []
+
     def get_discover_rewards(self, target_date_int: int) -> list[str]:
         resp = requests.get("https://card.discover.com/cardissuer/public/rewards/offer/v1/offer-categories")
         if resp.status_code != 200:
