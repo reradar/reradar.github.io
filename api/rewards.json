@@ -1,86 +1,66 @@
 [
-    {
-        "startDateInt": 20240101,
-        "items": [
-            {
-                "cardId": 1,
-                "categories": ["Restaurants", "Drug Stores"]
-            },
-            {
-                "cardId": 2,
-                "categories": ["Grocery Stores", "Fitness Clubs & Gym Memberships", "Self-Care & Spa Services"]
-            },
-            {
-                "cardId": 3,
-                "categories": ["Grocery Stores", "Fitness Clubs & Gym Memberships", "Self-Care & Spa Services"]
-            },
-            {
-                "cardId": 4,
-                "categories": ["Amazon.com", "Select Streaming Services"]
-            }
+  {
+    "startDateInt": 20240401,
+    "items": [
+      { "cardId": 1, "categories": ["Gas & EV Charging", "Home Improvement Stores", "Public Transit"] },
+      { "cardId": 2, "categories": ["Amazon.com", "Hotels", "Restaurants"] },
+      { "cardId": 3, "categories": ["Amazon.com", "Hotels", "Restaurants"] },
+      { "cardId": 4, "categories": ["Grocery Stores", "Drug Stores"] }
+    ]
+  },
+  {
+    "startDateInt": 20240701,
+    "items": [
+      { "cardId": 1, "categories": ["Grocery Stores", "Walmart"] },
+      {
+        "cardId": 2,
+        "categories": ["Gas Stations", "EV Charging", "Select Live Entertainment", "Movie Theaters"]
+      },
+      {
+        "cardId": 3,
+        "categories": ["Gas Stations", "EV Charging", "Select Live Entertainment", "Movie Theaters"]
+      },
+      { "cardId": 4, "categories": ["Gas Stations"] }
+    ]
+  },
+  {
+    "startDateInt": 20241001,
+    "items": [
+      { "cardId": 1, "categories": ["Amazon.com", "Target"] },
+      {
+        "cardId": 2,
+        "categories": ["PayPal", "McDonald's", "Pet Shops & Vet Services", "Select Charities"]
+      },
+      {
+        "cardId": 3,
+        "categories": ["PayPal", "McDonald's", "Pet Shops & Vet Services", "Select Charities"]
+      },
+      { "cardId": 4, "categories": ["Restaurants", "Citi Travel"] }
+    ]
+  },
+  {
+    "startDateInt": 20250101,
+    "items": [
+      { "cardId": 1, "categores": ["Restaurants", "Home Improvement Stores", "Select Streaming Services"] },
+      {
+        "cardId": 2,
+        "categores": [
+          "Grocery Stores Excluding Walmart And Target",
+          "Norwegian Cruise Line",
+          "Fitness Clubs & Gym Memberships",
+          "Hair, Nails & Spa Services"
         ]
-    },
-    {
-        "startDateInt": 20240401,
-        "items": [
-            {
-                "cardId": 1,
-                "categories": ["Gas & EV Charging", "Home Improvement Stores", "Public Transit"]
-            },
-            {
-                "cardId": 2,
-                "categories": ["Amazon.com", "Hotels", "Restaurants"]
-            },
-            {
-                "cardId": 3,
-                "categories": ["Amazon.com", "Hotels", "Restaurants"]
-            },
-            {
-                "cardId": 4,
-                "categories": ["Grocery Stores", "Drug Stores"]
-            }
+      },
+      {
+        "cardId": 3,
+        "categores": [
+          "Grocery Stores Excluding Walmart And Target",
+          "Norwegian Cruise Line",
+          "Fitness Clubs & Gym Memberships",
+          "Hair, Nails & Spa Services"
         ]
-    },
-    {
-        "startDateInt": 20240701,
-        "items": [
-            {
-                "cardId": 1,
-                "categories": ["Grocery Stores", "Walmart"]
-            },
-            {
-                "cardId": 2,
-                "categories": ["Gas Stations", "EV Charging", "Select Live Entertainment", "Movie Theaters"]
-            },
-            {
-                "cardId": 3,
-                "categories": ["Gas Stations", "EV Charging", "Select Live Entertainment", "Movie Theaters"]
-            },
-            {
-                "cardId": 4,
-                "categories": ["Gas Stations"]
-            }
-        ]
-    },
-    {
-        "startDateInt": 20241001,
-        "items": [
-            {
-                "cardId": 1,
-                "categories": ["Amazon.com", "Target"]
-            },
-            {
-                "cardId": 2,
-                "categories": ["PayPal", "McDonald's", "Pet Shops & Vet Services", "Select Charities"]
-            },
-            {
-                "cardId": 3,
-                "categories": ["PayPal", "McDonald's", "Pet Shops & Vet Services", "Select Charities"]
-            },
-            {
-                "cardId": 4,
-                "categories": ["Restaurants", "Citi Travel"]
-            }
-        ]
-    }
+      },
+      { "cardId": 4, "categores": ["Amazon", "Select Streaming Services"] }
+    ]
+  }
 ]
