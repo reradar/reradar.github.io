@@ -154,8 +154,6 @@ header h1 {
     display: none; /* Hide scrollbar on WebKit browsers */
 }
 
-
-
 /* Responsive Styling for Compact Header & Hero */
 @media (max-width: 768px) {
     header h1 {
@@ -199,88 +197,6 @@ header h1 {
     }
 }
 
-/* Features Section */
-.features {
-    background-color: #f9f9f9;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.features h2 {
-    margin-bottom: 40px;
-}
-
-.features-grid {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.feature-item {
-    flex: 1;
-    margin: 0 20px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 2px 15px rgba(0,0,0,0.05);
-}
-
-.feature-item h3 {
-    margin-bottom: 10px;
-    color: #4CAF50;
-}
-
-/* How It Works Section */
-.how-it-works {
-    background-color: white; /* White background for clarity */
-    padding: 60px 20px; /* Space around the section */
-    text-align: center; /* Center the heading */
-}
-
-.how-it-works h2 {
-    margin-bottom: 30px; /* Space below the heading */
-}
-
-.how-it-works ol {
-    max-width: 600px; /* Maximum width for the ordered list */
-    margin: 0 auto; /* Center the ordered list */
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-}
-
-.how-it-works ol li {
-    padding: 20px 0; /* Space above and below each list item */
-    border-bottom: 1px solid #ddd; /* Divider between items */
-    text-align: left; /* Left-align text in list items */
-}
-
-.how-it-works ol li:last-child {
-    border: none; /* Remove the border for the last item */
-}
-
-.how-it-works ol strong {
-    color: #4CAF50; /* Green color for strong text */
-}
-
-
-/* Testimonials Section */
-.testimonials {
-    background-color: #f4f4f4;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.testimonial-item {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-}
-
-/* Footer Section */
 footer {
     background-color: #333;
     color: white;
@@ -330,14 +246,6 @@ footer a:hover {
         padding-right: 0;
     }
 
-    .features-grid {
-        flex-direction: column;
-    }
-
-    .feature-item {
-        margin: 20px 0;
-    }
-
     .cta-button {
         padding: 10px 15px;
         font-size: 1em;
@@ -357,14 +265,6 @@ footer a:hover {
 
     .header-content p, .hero-text p {
         font-size: 1em;
-    }
-
-    .how-it-works ol {
-        max-width: 100%;
-    }
-
-    .testimonial-item {
-        padding: 15px;
     }
 
     footer ul {
