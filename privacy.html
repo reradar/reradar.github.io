@@ -45,6 +45,10 @@
             height: 40px;
             border-radius: 8px;
         }
+        .logo-item {
+            display: flex;
+            align-items: center;
+        }
         .title {
             font-family: "Nanum Myeongjo", serif;
             font-size: 2.5rem;
@@ -123,14 +127,14 @@
 </head>
 <body>
     <div class="container">
-        <a href="/" style="text-decoration: none; color: inherit;">
-            <div class="logo">
-              <div class="app-icon">
-                <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c0/a2/4c/c0a24c83-3107-b0a8-9367-76c7291f8736/AppIcon-0-0-1x_U007epad-0-1-85-220.png/460x0w.webp" alt="Reward Radar Logo">
-              </div>
-              Reward Radar
-            </div>
-        </a>
+        <div class="logo">
+            <a href="/" style="text-decoration: none; color: inherit;" class="logo-item">
+                <div class="app-icon">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c0/a2/4c/c0a24c83-3107-b0a8-9367-76c7291f8736/AppIcon-0-0-1x_U007epad-0-1-85-220.png/460x0w.webp" alt="Reward Radar Logo">
+                </div>
+                Reward Radar
+            </a>
+        </div>
         <div class="title">Our Privacy Principles</div>
         <p>At Reward Radar, we take privacy seriously. We believe in collecting only what’s necessary, being transparent, and protecting your data.</p>
         <ul>
