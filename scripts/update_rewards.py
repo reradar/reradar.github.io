@@ -53,7 +53,7 @@ class Worker:
         match = re.search(r"from (\d{1,2})/(\d{1,2})/(\d{4}) - \d{1,2}/\d{1,2}/\d{4}", date_range.text)
         date_integer = 0
         if match:
-            day, month, year = match.group(1), match.group(2), match.group(3)
+            month, day, year = match.group(1), match.group(2), match.group(3)
             date_integer = int(year) * 10000 + int(month) * 100 + int(day)
         if date_integer == target_date_int:
             categories = []

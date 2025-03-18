@@ -1,6 +1,7 @@
 [
   {
     "startDateInt": 20240401,
+    "delete": true,
     "items": [
       { "cardId": 1, "categories": ["Gas & EV Charging", "Home Improvement Stores", "Public Transit"] },
       { "cardId": 2, "categories": ["Amazon.com", "Hotels", "Restaurants"] },
@@ -63,6 +64,15 @@
         ]
       },
       { "cardId": 4, "categories": ["Amazon", "Select Streaming Services"] }
+    ]
+  },
+  {
+    "startDateInt": 20250401,
+    "items": [
+      { "cardId": 1, "categories": ["Grocery Stores", "Wholesale Clubs"] },
+      { "cardId": 2, "categories": ["Amazon", "Select Streaming Services"] },
+      { "cardId": 3, "categories": ["Amazon", "Select Streaming Services"] },
+      { "cardId": 4, "categories": ["Grocery Stores", "Citi Travel"] }
     ]
   }
 ]
