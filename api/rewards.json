@@ -1,6 +1,7 @@
 [
   {
     "startDateInt": 20241001,
+    "delete": true,
     "items": [
       { "cardId": 1, "categories": ["Amazon.com", "Target"] },
       {
@@ -53,14 +54,14 @@
   {
     "startDateInt": 20250701,
     "items": [
-      { "cardId": 1, "categories": ["Gas Stations", "Public Transit", "Utilities"] },
+      { "cardId": 1, "categories": ["Gas & EV Charging", "Public Transit", "Utilities"] },
       {
         "cardId": 2,
-        "categories": ["Instacart", "Gas Stations", "Ev Charging", "Select Live Entertainment"]
+        "categories": ["Gas & EV Charging", "Instacart", "Select Live Entertainment"]
       },
       {
         "cardId": 3,
-        "categories": ["Instacart", "Gas Stations", "Ev Charging", "Select Live Entertainment"]
+        "categories": ["Gas & EV Charging",  "Instacart", "Select Live Entertainment"]
       },
       { "cardId": 4, "categories": ["Gas Stations", "Home Improvement Stores"] }
     ]
