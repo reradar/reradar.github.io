@@ -1,31 +1,7 @@
 [
   {
-    "startDateInt": 20240401,
-    "delete": true,
-    "items": [
-      { "cardId": 1, "categories": ["Gas & EV Charging", "Home Improvement Stores", "Public Transit"] },
-      { "cardId": 2, "categories": ["Amazon.com", "Hotels", "Restaurants"] },
-      { "cardId": 3, "categories": ["Amazon.com", "Hotels", "Restaurants"] },
-      { "cardId": 4, "categories": ["Grocery Stores", "Drug Stores"] }
-    ]
-  },
-  {
-    "startDateInt": 20240701,
-    "items": [
-      { "cardId": 1, "categories": ["Grocery Stores", "Walmart"] },
-      {
-        "cardId": 2,
-        "categories": ["Gas Stations", "EV Charging", "Select Live Entertainment", "Movie Theaters"]
-      },
-      {
-        "cardId": 3,
-        "categories": ["Gas Stations", "EV Charging", "Select Live Entertainment", "Movie Theaters"]
-      },
-      { "cardId": 4, "categories": ["Gas Stations"] }
-    ]
-  },
-  {
     "startDateInt": 20241001,
+    "delete": true,
     "items": [
       { "cardId": 1, "categories": ["Amazon.com", "Target"] },
       {
@@ -73,6 +49,21 @@
       { "cardId": 2, "categories": ["Amazon", "Select Streaming Services"] },
       { "cardId": 3, "categories": ["Amazon", "Select Streaming Services"] },
       { "cardId": 4, "categories": ["Grocery Stores", "Citi Travel"] }
+    ]
+  },
+  {
+    "startDateInt": 20250701,
+    "items": [
+      { "cardId": 1, "categories": ["Gas & EV Charging", "Public Transit", "Utilities"] },
+      {
+        "cardId": 2,
+        "categories": ["Gas & EV Charging", "Instacart", "Select Live Entertainment"]
+      },
+      {
+        "cardId": 3,
+        "categories": ["Gas & EV Charging",  "Instacart", "Select Live Entertainment"]
+      },
+      { "cardId": 4, "categories": ["Gas Stations", "Home Improvement Stores"] }
     ]
   }
 ]
