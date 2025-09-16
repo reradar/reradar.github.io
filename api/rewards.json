@@ -48,9 +48,9 @@
     "startDateInt": 20251001,
     "items": [
       { "cardId": 1, "categories": ["Amazon.com", "Drug Stores"] },
-      { "cardId": 2, "categories": ["Old Navy", "Chase Travel", "Department Stores"] },
-      { "cardId": 3, "categories": ["Old Navy", "Chase Travel", "Department Stores"] },
-      { "cardId": 4, "categories": ["The Citi Travel", "Restaurants"] }
+      { "cardId": 2, "categories": ["PayPal (Dec only)", "Department Stores", "Old Navy", "Chase Travel"] },
+      { "cardId": 3, "categories": ["PayPal (Dec only)", "Department Stores", "Old Navy", "Chase Travel"] },
+      { "cardId": 4, "categories": ["Restaurants", "The Citi Travel Site"] }
     ]
   }
 ]
