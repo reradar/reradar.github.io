@@ -1,21 +1,5 @@
 [
   {
-    "startDateInt": 20241001,
-    "delete": true,
-    "items": [
-      { "cardId": 1, "categories": ["Amazon.com", "Target"] },
-      {
-        "cardId": 2,
-        "categories": ["PayPal", "McDonald's", "Pet Shops & Vet Services", "Select Charities"]
-      },
-      {
-        "cardId": 3,
-        "categories": ["PayPal", "McDonald's", "Pet Shops & Vet Services", "Select Charities"]
-      },
-      { "cardId": 4, "categories": ["Restaurants", "Citi Travel"] }
-    ]
-  },
-  {
     "startDateInt": 20250101,
     "items": [
       { "cardId": 1, "categories": ["Restaurants", "Home Improvement Stores", "Select Streaming Services"] },
@@ -55,15 +39,18 @@
     "startDateInt": 20250701,
     "items": [
       { "cardId": 1, "categories": ["Gas & EV Charging", "Public Transit", "Utilities"] },
-      {
-        "cardId": 2,
-        "categories": ["Gas & EV Charging", "Instacart", "Select Live Entertainment"]
-      },
-      {
-        "cardId": 3,
-        "categories": ["Gas & EV Charging",  "Instacart", "Select Live Entertainment"]
-      },
+      { "cardId": 2, "categories": ["Gas & EV Charging", "Instacart", "Select Live Entertainment"] },
+      { "cardId": 3, "categories": ["Gas & EV Charging", "Instacart", "Select Live Entertainment"] },
       { "cardId": 4, "categories": ["Gas Stations", "Home Improvement Stores"] }
+    ]
+  },
+  {
+    "startDateInt": 20251001,
+    "items": [
+      { "cardId": 1, "categories": ["Amazon.com", "Drug Stores"] },
+      { "cardId": 2, "categories": ["Old Navy", "Chase Travel", "Department Stores"] },
+      { "cardId": 3, "categories": ["Old Navy", "Chase Travel", "Department Stores"] },
+      { "cardId": 4, "categories": ["The Citi Travel", "Restaurants"] }
     ]
   }
 ]
