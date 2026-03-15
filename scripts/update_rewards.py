@@ -19,7 +19,7 @@ class Worker:
             return []
         soup = BeautifulSoup(resp.text, 'html.parser')
         date_div = soup.find("div", class_ = "dividend-quarterly-offer-content__offer__labels__signup-label")
-        signup_date = datetime.strptime(date_div.span.contents[2].string, "%m/%d/%Y").date()
+        signup_date = datetime.strptime(date_div.span.contents[-1].string, "%m/%d/%Y").date()
         next_q_date_int = self.get_next_quarter_start(signup_date)
         if next_q_date_int != target_date_int:
             return []

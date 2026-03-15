@@ -1,14 +1,5 @@
 [
   {
-    "startDateInt": 20250401,
-    "items": [
-      { "cardId": 1, "categories": ["Grocery Stores", "Wholesale Clubs"] },
-      { "cardId": 2, "categories": ["Amazon", "Select Streaming Services"] },
-      { "cardId": 3, "categories": ["Amazon", "Select Streaming Services"] },
-      { "cardId": 4, "categories": ["Grocery Stores", "Citi Travel"] }
-    ]
-  },
-  {
     "startDateInt": 20250701,
     "items": [
       { "cardId": 1, "categories": ["Gas & EV Charging", "Public Transit", "Utilities"] },
@@ -33,6 +24,15 @@
       { "cardId": 2, "categories": ["Dining", "Norwegian Cruise Line", "American Heart Association"] },
       { "cardId": 3, "categories": ["Dining", "Norwegian Cruise Line", "American Heart Association"] },
       { "cardId": 4, "categories": ["Amazon", "Select Streaming Services"] }
+    ]
+  },
+  {
+    "startDateInt": 20260401,
+    "items": [
+      { "cardId": 1, "categories": ["Restaurants", "Home Improvement Stores"] },
+      { "cardId": 2, "categories": ["Amazon", "Chase Travel", "Feeding America"] },
+      { "cardId": 3, "categories": ["Amazon", "Chase Travel", "Feeding America"] },
+      { "cardId": 4, "categories": ["Grocery Stores", "Citi Travel"] }
     ]
   }
 ]
