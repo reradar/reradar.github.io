@@ -6,7 +6,8 @@
       { "cardId": 2, "categories": ["Gas & EV Charging", "Instacart", "Select Live Entertainment"] },
       { "cardId": 3, "categories": ["Gas & EV Charging", "Instacart", "Select Live Entertainment"] },
       { "cardId": 4, "categories": ["Gas Stations", "Home Improvement Stores"] }
-    ]
+    ],
+    "delete": true
   },
   {
     "startDateInt": 20251001,
@@ -33,6 +34,15 @@
       { "cardId": 2, "categories": ["Amazon", "Chase Travel", "Feeding America"] },
       { "cardId": 3, "categories": ["Amazon", "Chase Travel", "Feeding America"] },
       { "cardId": 4, "categories": ["Grocery Stores", "Citi Travel"] }
+    ]
+  },
+  {
+    "startDateInt": 20260701,
+    "items": [
+      { "cardId": 1, "categories": ["Gas & EV Charging", "Transportation", "Drug Stores"] },
+      { "cardId": 2, "categories": ["Gas & EV Charging", "Public Transit", "Select Live Entertainment", "United Way"] },
+      { "cardId": 3, "categories": ["Gas & EV Charging", "Public Transit", "Select Live Entertainment", "United Way"] },
+      { "cardId": 4, "categories": ["Gas Stations", "Home Improvement Stores"] }
     ]
   }
 ]
